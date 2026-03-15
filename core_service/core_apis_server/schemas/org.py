@@ -1,12 +1,10 @@
 from pydantic import BaseModel
 
-class TeamCreate(BaseModel):
+class OrganizationCreate(BaseModel):
     name: str
-    organization_id: int
 
-class TeamRead(BaseModel):
+class OrganizationRead(BaseModel):
     id: int
     name: str
-    organization_id: int
     class Config:
         orm_mode = True
